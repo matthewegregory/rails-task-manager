@@ -1,0 +1,17 @@
+<h2><%= @task.title %></h2>
+<p><%= @task.details %></p>
+<p><%= @task.completed %></p>
+
+<%= link_to (edit_path(@task)) do %>
+<i class='fa-solid fa-marker'></i>
+<% end %>
+
+<%= link_to (task_path(@task)),
+data: {turbo_method: :delete, turbo_confirm: "are you sure?"} do
+%>
+<i class='fa-solid fa-trash-can'></i>
+<% end %>
+
+<%= link_to (tasks_path) do %>
+<i class='fa-solid fa-backward'></i>
+<% end %>

@@ -1,0 +1,10 @@
+<h2><i class="fa-solid fa-plus"></i></h2>
+<%= form_with model: @task do |f| %>
+  <%= f.label :title, "task:" %>
+  <%= f.text_field :title %>
+  <%= f.label :details, "details:" %>
+  <%= f.text_field :details %>
+  <%= f.label :completed, "done?:" %>
+  <%= f.check_box :completed %>
+  <%= f.submit %>
+<% end %>
